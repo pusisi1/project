@@ -28,3 +28,10 @@ def main(request):
         'rain_list': rain_list
     }
     return render(request, 'main.html', context)
+
+def sub(request):
+    return render(request, 'sub.html')
+
+def text(request):
+    return render(request, 'text.html')
+    
