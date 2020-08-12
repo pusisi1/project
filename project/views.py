@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from database.models import database_test
+from database.models import database_test, database_raintest
 
 # def main(request):
 #     list = []
@@ -22,7 +22,9 @@ from database.models import database_test
 def main(request):
 # select * from article order by id desc
     article_list = database_test.objects.order_by('date')
+    rain_list = database_raintest.objects.order_by('date')
     context = {
-        'article_list' : article_list
+        'article_list' : article_list,
+        'rain_list': rain_list
     }
     return render(request, 'main.html', context)

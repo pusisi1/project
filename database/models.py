@@ -10,4 +10,19 @@ class database_test(models.Model):
     raintype = models.CharField(max_length=50)
 
     class Meta:
-        db_table = "database_test"
+        db_table = "database_test"   
+
+class database_raintest(models.Model):
+    date = models.CharField(max_length=50, primary_key=True)
+    temper1 = models.CharField(max_length=50)
+    temper2 = models.CharField(max_length=50)
+    rain = models.CharField(max_length=50)
+   
+    class Meta:
+        db_table = "database_raintest"  
+
+
+
+        
+
+

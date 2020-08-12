@@ -168,7 +168,6 @@
         width:20%;
     }
 
-    
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color:blueviolet;
@@ -190,7 +189,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">예보</a></li>
+        <li><a href="#">소식</a></li>
         <li><a href="#">바람</a></li>
         <li><a href="#">강수</a></li>
       </ul>
@@ -230,46 +229,7 @@
     <div class="raintype">{{we.raintype}}</div>
   </div>
   {% endfor %}
-  <!-- <div class="time1">
-    <div class="date"></div>
-    <div class="temper1"></div>
-    <div class="temper2"></div>
-    <div class="rain"></div>
-    <div class="wind"></div>
-    <div class="raintype"></div>
-  </div>
-  <div class="time2">
-    <div class="date"></div>
-    <div class="temper1"></div>
-    <div class="temper2"></div>
-    <div class="rain"></div>
-    <div class="wind"></div>
-    <div class="raintype"></div>
-  </div>
-  <div class="time3">
-    <div class="date"></div>
-    <div class="temper1"></div>
-    <div class="temper2"></div>
-    <div class="rain"></div>
-    <div class="wind"></div>
-    <div class="raintype"></div>
-  </div>
-  <div class="time4">
-    <div class="date"></div>
-    <div class="temper1"></div>
-    <div class="temper2"></div>
-    <div class="rain"></div>
-    <div class="wind"></div>
-    <div class="raintype"></div>
-  </div>
-  <div class="time5">
-    <div class="date"></div>
-    <div class="temper1"></div>
-    <div class="temper2"></div>
-    <div class="rain"></div>
-    <div class="wind"></div>
-    <div class="raintype"></div>
-  </div> -->
+  
 </div>
 
 <div class="text">
@@ -278,47 +238,20 @@
 </div>
 
 <div class="Two">
-  <div class="day1">
-    <div class = "rain_date"></div>
+  {% for qe in rain_list %}
+  <div class="day{{qe.date}}">
+    <div class = "rain_date">{{qe.temper1}}</div>
     <div class = "amount">
-      <div class="AM"></div>
-      <div class="PM"></div>
+      <div class="AM">{{qe.temper2}}</div>
+      <div class="PM">{{qe.rain}}</div>
     </div>
+    {% endfor %}
   </div>
-  <div class="day2">
-    <div class = "rain_date"></div>
-    <div class = "amount">
-      <div class="AM"></div>
-      <div class="PM"></div>
-    </div>
-  </div>
-  <div class="day3">
-    <div class = "rain_date"></div>
-    <div class = "amount">
-      <div class="AM"></div>
-      <div class="PM"></div>
-    </div>
-  </div>
-  <div class="day4">
-    <div class = "rain_date"></div>
-    <div class = "amount">
-      <div class="AM"></div>
-      <div class="PM"></div>
-    </div>
-  </div>
-  <div class="day5">
-    <div class = "rain_date"></div>
-    <div class = "amount">
-      <div class="AM"></div>
-      <div class="PM"></div>
-    </div>
-  </div>
+  
   
 
 
 </div>
-
-
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
