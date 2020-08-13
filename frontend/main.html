@@ -196,13 +196,13 @@
 
 <div class="first">
   {% for we in article_list %}
-   <div class="time{{ we.date }}">
-    <div class="date">{{ we.date }}</div>
-    <div class="temper1">{{ we.temper1 }}</div>
-    <div class="temper2">{{we.temper2}}</div>
-    <div class="rain">{{we.rain}}</div>
-    <div class="wind">{{we.wind}}</div>
-    <div class="raintype">{{we.raintype}}</div>
+   <div class="time{{ we.id }}">
+    <div class="date">{{ we.day }}</div>
+    <div class="temper1">{{ we.time }}</div>
+    <div class="temper2">{{we.weather}}</div>
+    <div class="rain">{{we.RP}}</div>
+    <div class="wind">{{we.rain}}</div>
+    <div class="raintype">{{we.temp}}</div>
   </div>
   {% endfor %}
   

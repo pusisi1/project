@@ -22,10 +22,17 @@ import project.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/',views.main),
+    path('korea_data/',views.korea_data),
+    path('norway_data/',views.norway_data),
+    path('bbc_data/',views.bbc_data),
     path('sub/',views.sub),
     path('text/',views.text),
     path('movie/',views.movie),
     path('signup/', views.signup),
     path('signin/', views.signin),
     path('signout/', views.signout),
+    #path('korea_data/', views.korea_data),
+    #path('norway_data/', views.norway_data),
+    #path('bbc_data/', views.bbc_data),
+    
 ]
