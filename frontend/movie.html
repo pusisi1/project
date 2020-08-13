@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    h2{
+        font-size: 20px;
+    }
+   
+    .play{
+        background-color: navy;
+        height:400px;
+    }
+    .dabon{
+        white-space:pre;
+    }
+
+    .menu1{
+        height:200px;
+        border:1px solid #000000;
+    }
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    /* @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    } */
+  </style>
+
+
+
+
+   
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>스마트 날씨 예보</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">날씨예보</a></li>
+        <li><a href="#section2">기상특보</a></li>
+        <li><a href="#section3">장기예보</a></li>
+        <li><a href="#section3">날씨해설</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search date..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>[날씨예보17] 밤까지 남해안 강한 비 내일 곳곳에 소나기</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> 입력 : 2020.08.11 17:00:00</h5>
+      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5>
+      <div class="play"></div>
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>대본보기</h2>
+      <div class="dabon">
+        <div style="overflow:scroll; border:1px solid #a19b9b;  height:200px; padding:10px; background-color:white;">
+2020년 8월11일 17시 발표된 날씨예보17입니다.
+지역별 더 자세한 날씨는 기상청 날씨누리와 기상청 날씨알리미앱을 참고하시기 바랍니다.
+
+안녕하세요. 오후 5시 날씨예보 예보분석관 임다솔입니다.
+오늘 오전까지 곳곳에 강한 비를 뿌렸던 비구름대는 차차 약화되고 또 동쪽으로 빠져나가면서
+오늘 밤이면 점차 전국에 비가 그치겠고, 일부 지역에만 남아 있겠는데요.
+하지만 내일은 또 다시 내륙 곳곳에 소나기가 예상이 되고 있습니다. 자세한 날씨 전망, 
+자료들을 보면서 더 알아보겠습니다.
+
+먼저 대기 상층의 흐름을 보시면 어제 오후에 태풍에서 약화된 저기압이 빠져나간 이후
+그 뒤쪽에서 따뜻하고 습한 북태평양고기압이 그 세력을 확장을 한 상태였습니다.
+그리고 우리나라 북쪽으로는 차고 건조한 공기가 유입이 되고 있고요.
+우리나라 서쪽에도 건조한 공기가 영향을 주고 있는 상황 이였습니다.
+우리나라는 이쪽에 있는 건조 공기와 아래쪽에 있는 습한 공기,
+이 두 개 공기 사이에서 대기가 굉장히 불안정한 상태였는데요.
+레이더 영상을 함께 보시면, 이쪽에 있는 비구름대는 앞서 말씀 드렸던
+차고 건조한 공기가 활성화 시켰던 비구름대인데요.
+이 찬 공기의 흐름을 따라서 동쪽으로 점차 이동을 하고 있는 모습입니다.
+그리고 우리나라 서쪽에서도 건조한 공기가 영향을 주고 있다고 말씀을 드렸는데요.
+이 건조한 공기의 영향을 받는 비구름대는 바로 이쪽입니다.
+이 비구름대는 찬 공기가 없기 때문에 오늘 아침 만큼 강하게 발달하지는 않겠고요.
+내일 오전까지 전라도와 경남에 영향을 줄 예정입니다.
+주의 깊게 보셔야 할 부분은 바로 아래쪽에 있는 비구름대입니다.
+기존에 북태평양고기압의 위쪽으로 건조한 공기가 위치를 했고요.
+이 확장하는 북태평양고기압의 가장 자리에서는 남서풍이 들어오고 있고요.
+그리고 앞서 말씀드린 건조한 공기와 부딪치면서 강한 비구름대가 이렇게 만들어지고 있는 모습입니다.
+남해안에 발달한 이 비구름대는 밤까지 영향을 주다가 점차 약해지겠습니다.
+
+비구름대가 빠져나간 이후 이 북태평양 고기압이 점차 확장을 하면서 우리나라는 내일 대부분 지역이 
+따뜻하고 습한 북태평양 고기압으로 뒤덮이겠는데요. 따라서 내일은 대부분 지역에서 폭염에 
+유의하셔야겠습니다. 또 이 북태평양 고기압이 확장을 하면서 뜨거운 수증기가 들어오겠는데요.
+이 습한 공기는 가볍기 때문에 위로 올라가려는 성질을 가지고 있는데요.
+대기가 불안정한 상태이기 때문에 지형이나 일사의 도움을 조금이라도 받으면 쉽게 비구름대가 발달하면서
+내일 전국 곳곳에 소나기가 예상이 되고 있습니다.
+가벼운 수증기로 만들어진 비구름대가 높게 발달하기 때문에 강수량이 많아 질 수도 있는데요.
+동네예보 분포도를 보면서 자세히 확인해 보겠습니다.
+
+예보된 강수 영역을 보시면 중부지방에 일부 지역과 전라도, 경상도, 제주도 등 지금 비가 내리고 있는 
+일부 지역에서 오늘 밤까지 비가 이어지다가 오늘 밤이 되면 차차 그치겠습니다.
+하지만 전라도와 경상남도는 내일 오전까지 비가 이어지겠습니다.
+내일까지 예상되는 비의 양은요. 제주도와 경남남해안에 30~80mm의 비가 예상이 되고 있고요.
+또 제주도 산지에서는 지형에 부딪치면서 비구름대가 높이 발달하면서 100mm 이상의 강수량을 기록하는 곳도 
+있겠습니다. 그리고 전라도와 남해안을 제외한 경상도, 그리고 충청도는 20~60mm의 비가 예상이 되고 있고요.
+경기남부와 강원영서남부 이쪽에서는 5~20mm의 비가 예상이 되고 있습니다.
+한편, 내일 오후부터 밤사이에는 낮 동안 기온이 많이 오르면서 대기가 불안정해지겠는데요.
+분포도에서 보시는 것처럼 노란색으로 표시가 된 지역에 전국 대부분 지역에서 소나기가 내릴 가능성이 있습니다.
+예상되는 소나기의 강수량은 20~80mm가 되겠습니다. 소나기가 내리는 지역에서는 돌풍과 함께 
+천둥, 번개가 치는 곳도 있고요. 또 국지적으로 강한 비가 내릴 가능성이 높으니
+비 피해가 더해지지 않도록 유의하시기 바랍니다.
+
+마지막으로 기온에 대해서 말씀 드리겠습니다. 현재 많은 지역에 폭염주의보가 내려져 있고요.
+체감하는 온도가 35도가 넘어가는 대구와 경상, 그리고 강원도 동해안에 일부지역에서는
+폭염경보까지 발효가 되어 있습니다. 내일은 이 지역 외에도 전국적으로 그동안 내렸던 비 때문에
+습도가 매우 높아서 보시는 바와 같이 최고 기온 보다 체감하는 기온이 더 높게 나타나는 지역이 많겠고요.
+또 이 폭염특보가 내려진 곳 이외에도 보시는 바와 같이 폭염영향예보가 이렇게 푸른색으로 관심 수준으로 
+발표가 되어 있습니다. 더위 피해가 없도록 건강관리에도 유의하시기 바랍니다.
+지금까지 기상청 날씨예보였습니다.
+            </div>
+      
+<div class="menu1"></div>
+<div class="title1"></div>
+<div class="menu2"></div>
+<div class="title2"></div>
+<div class="menu3"></div>
+<div class="title3"></div>
+<div class="menu4"></div>
+<div class="title4"></div>
+     
+
+{% endblock %}
+
+
