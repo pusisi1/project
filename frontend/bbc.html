@@ -1,0 +1,349 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+
+  
+ 
+  .menu_bar{
+      display: flex;
+      flex-direction: row;
+      height:50px;
+      line-height: 300%;
+      text-align: center;
+      background-color:#39f;
+      color:white;
+      font-size: 20px;
+      border-bottom:2px solid rgba(0,0,0,0.2);
+      
+  }
+  a {
+    color:#FFFFFF; 
+    text-decoration:none !important; 
+    } 
+    a:hover { 
+      text-decoration:none !important;
+      color:#FFFFFF;
+      }
+
+
+  .empty{ width:5%;}
+  .menu1{
+    width:10%;
+    border-bottom:4px solid #39F; 
+    transition: 0.7s;
+    }
+    .menu2{
+    width:10%;
+    border-bottom:4px solid #39F; 
+    transition: 0.7s;
+    }
+    .menu3{
+    width:10%;
+    border-bottom:4px solid #39F; 
+    transition: 0.7s;
+    }
+    .menu4{
+    width:10%;
+    border-bottom:4px solid #39F; 
+    transition: 0.7s;
+    }
+
+  .empty2{width:40%;}
+
+  .menu1:hover{border-bottom:4px solid #FFFFFF}
+  .menu2:hover{border-bottom:4px solid #FFFFFF;}
+  .menu3:hover{border-bottom:4px solid #FFFFFF}
+  .menu4:hover{border-bottom:4px solid #FFFFFF}
+
+  .text_box{
+    height:200px;
+    background-color: #39f;
+    
+    color:#FFFFFF;
+    text-align:center;
+    font-size: 40px;
+    line-height: 500%;
+  }
+
+
+
+.tema{
+	display:flex;
+order:5;
+flex-direction:row;
+width:100%;
+height:80px;
+background:linear-gradient(to bottom, #39f,#fff);
+     
+}
+.empty1{
+	width:35%;
+	
+}
+
+
+.eat{
+	width:35%;
+	
+}
+
+
+
+.active{
+	width:35%;
+	
+}
+
+
+
+
+
+.squ{
+	display:flex;
+	width:160px;
+	height:110px;
+	transition:0.5s;
+	border-radius:5px;
+	position:relative;
+	left:9%;
+	overflow:hidden;
+	box-shadow: 1px 1px rgba(0,0,0,0);
+	
+	
+}
+
+
+
+.squ1{
+	display:flex;
+	width:160px;
+	height:110px;
+	box-shadow: 1px 1px rgba(0,0,0,0);
+	border-radius:5px;
+	position:relative;
+	left:9%;
+	overflow:hidden;
+	transition:0.5s;
+}
+
+.squ2{
+	display:flex;
+	width:160px;
+	height:110px;
+	box-shadow: 1px 1px rgba(0,0,0,0);
+	border-radius:5px;
+	position:relative;
+	left:9%;
+	overflow:hidden;
+	transition:0.5s;
+}
+.squ3{
+	display:flex;
+	width:160px;
+	height:110px;
+	box-shadow: 1px 1px rgba(0,0,0,0);
+	border-radius:5px;
+	position:relative;
+	left:9%;
+	overflow:hidden;transition:0.5s;
+}
+
+
+.squ:hover{
+	box-shadow: 0px 3px 20px 5px #03F;
+	
+}
+
+.squ1:hover{
+	box-shadow: 0px 3px 20px 5px #03F;
+}
+
+.squ2:hover{
+	box-shadow: 0px 3px 20px 5px #03F;
+}
+
+.squ3:hover{
+	box-shadow: 0px 3px 20px 5px #03F;
+}
+
+.title{
+    height:200px;
+    line-height: 1500%;
+    position: relative;
+    left: 2%;
+    font-size: 20px;
+}
+
+.first{
+    display:flex;
+    flex-direction:row;
+    background-color:white;
+    width: 100%;
+    height:300px;
+    text-align: center;
+    
+}
+.menu{
+    width:100%;
+    
+    background-color:rgb(16, 74, 133);
+    font-size: 20px;
+    color: white;
+}
+.day_name{
+ 
+  height:15%;
+  width:100%;
+  line-height: 240%;
+}
+.time_name{
+    
+  height:15%;
+  width:100%;
+  line-height: 230%;
+  
+}
+.weather_name{
+   
+  height:20%;
+  width:100%;
+  line-height: 300%;
+  
+}
+
+.rain_name{
+ 
+  height:20%;
+  width:100%;
+  line-height: 300%;
+ 
+}
+.temp_name{
+   
+  height:15%;
+  width:100%;
+  line-height: 230%;
+  
+}
+
+
+    .whe{
+        font-size: 12px;
+        width:80%;
+        background-color: #3399ff;
+        color: white;
+    }
+
+
+
+
+.day{
+  
+  height:30%;
+  width:100%;
+  font-size: 15px;
+  line-height: 288%;
+}
+
+.weather{
+    
+  height:30%;
+  width:100%;
+  line-height: 220%;
+  font-size: 15px;
+}
+.rain{
+   
+  height:15%;
+  width:100%;
+  line-height: 15%;
+  font-size: 15px;
+}
+
+.temp{
+   
+  height:15%;
+  width:100%;
+  line-height: 90%;
+  font-size: 20px;
+}
+/* 중석안녕 */
+ 
+
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color:rgb(71, 64, 64);
+    padding: 25px;
+  }
+</style>
+
+
+
+<div class="menu_bar">
+  <div class="empty"></div>
+  <div class="menu1"><a href="/sub/" >소식</a></div>
+  <div class="menu2"><a href="" >태풍</a></div>
+  <div class="menu3"><a href="" >영상·일기도</a></div>
+  <div class="menu4"><a href="" >바다</a></div>
+  <div class="empty2"></div>
+</div>
+<div class="text_box">다양한 기상청에서 기상정보를 제공받으세요</div>
+
+
+<section class = "tema">
+  <div class="empty1"></div>
+  <div class="eat">
+  <div class="squ"><a href="/main/"><img src="/frontend/images/korea.jpg" height=100% width=100%><div class="te"><h1>서 울</h1></div></a>
+  
+  </div>
+  </div>
+  
+  <div class="active">
+  <div class="squ1"><a href="/norway/"><img src="/frontend/images/norway.jpg" height=100% width=100%><div class="te"><h1>제 주 도</h1></div></a></div>
+  </div>
+  
+  <div class="hobby">
+  <div class="squ2"><a href="/bbc/"><img src="/frontend/images/bbc.jpg" height=100% width=100%><div class="te"><h1>경 주</h1></div></a></div>
+  </div>
+  
+  
+  <div class="empty2">
+  </div>
+  
+  </section>
+
+ 
+
+
+  <div class = "title">대한민국 기상청 날씨누리</div>
+
+<div class="first">
+  <div class="menu">
+    <div class="day_name">날짜</div>
+    <div class="time_name">시간</div>
+    <div class="weather_name">날씨</div>
+ 
+    <div class="rain_name">강수량</div>
+    <div class="temp_name">기온</div>
+</div>
+    {% for we in article_list %}
+      <div class="whe">
+      <div class="day">{{ we.time }}</div>
+      
+      <div class="weather">{{we.weather}}</div>
+      <div class="rain">{{we.rain}}</div>
+      <div class="temp">{{we.temp}}</div>
+      
+    </div>
+    {% endfor %}
+    
+  </div>
+  
+
+    
+  </div>
+
+{% endblock %}

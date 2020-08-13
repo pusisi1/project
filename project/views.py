@@ -176,7 +176,7 @@ def korea_data(): #한국기상청 날짜
 
 
 def main(request):
-# select * from article order by id desc
+#  select * from article order by id desc
     article_list = KOREA.objects.order_by('id')
     
     context = {
@@ -187,6 +187,7 @@ def main(request):
 
 def sub(request):
     return render(request, 'sub.html')
+
 
 def text(request):
  name_list = Article.objects.order_by('id')
@@ -245,4 +246,32 @@ def signout(request):
     del request.session['email'] # 개별 삭제
     request.session.flush() # 전체 삭제
     return HttpResponseRedirect('/main/')
+
+
+def korea(request):
+    article_list = KOREA.objects.order_by('id')
+    
+    context = {
+        'article_list' : article_list,
+        
+    }
+    return render(request, 'korea.html',context)
+
+def norway(request):
+    article_list = NORWAY.objects.order_by('id')
+    
+    context = {
+        'article_list' : article_list,
+        
+    }
+    return render(request, 'norway.html',context)
+
+def bbc(request):
+    article_list = BBC.objects.order_by('id')
+    
+    context = {
+        'article_list' : article_list,
+        
+    }
+    return render(request, 'bbc.html',context)
    

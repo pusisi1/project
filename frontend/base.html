@@ -10,29 +10,54 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
+<style>
 
+   /* .container-fluid{
+      display:flex;
+      flex-direction:row;
+  }  */
+
+  .navbar-header{
+    display:flex;
+      flex-direction:row;
+  }
+  .logo{
+    line-height: 45px;
+    width: 20%;
+    background-color: #39f;
+  }
+  .navbar {
+      
+      width:100%;
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color:#39f;
+      border: 0px solid #ffffff;
+    }
+  
+  </style>
 <body>
-
+  
   <nav class="navbar navbar-inverse">
+    
     <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      
+      <div class="navbar-header"> 
+        <div class="logo">
+          <img src="/frontend/images/logo.png" width=70% height=70%></div>
+        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/main/">스팩 기상청</a>
+        </button> -->
+        <a class="navbar-brand" href="/main/"><span style="color: white">스팩 기상청</span></a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="/sub/">소식</a></li>
-          <li><a href="#">바람</a></li>
-          <li><a href="#">강수</a></li>
-        </ul>
+     
         <ul class= "nav navbar-nav navbar-right">
           <li>
             <a href="/signup/">
-              <span class="glyphicon glyphicon-log-out"></span> 회원가입
+              <span style="color: white" class="glyphicon glyphicon-log-out"></span> 
+              <span style="color: white">회원가입</span>
               
             </a>
           </li>
@@ -41,14 +66,14 @@
           {% if request.session.email %}
           <li>
             <a href="/signout/">
-              <span class="glyphicon glyphicon-log-out"></span> 로그아웃
-              {{ request.session.email }} 님 반갑습니다.
+              <span style="color: white" class="glyphicon glyphicon-log-out"></span> <span style="color: white;">로그아웃</span>
+              <span style="color:white"> {{request.session.email }} 님 반갑습니다.</span>
             </a>
           </li>
           {% else %}
           <li>
             <a href="/signin/">
-              <span class="glyphicon glyphicon-log-in"></span> 로그인
+              <span style="color: white;" class="glyphicon glyphicon-log-in"></span> <span style="color: white;">로그인</span>
             </a>
           </li>
           {% endif %}
