@@ -190,7 +190,7 @@ def sub(request):
 
 
 def text(request):
- name_list = Article.objects.order_by('id')
+ name_list = Article.objects.order_by('-id')
  context = {
         'name_list' : name_list
     }
@@ -204,6 +204,8 @@ def text(request):
         article = Article(content=content, user=user)
         article.save()
         return render(request, 'write_success.html')
+        # return HttpResponseRedirect('/text/')
+
     except:
         return render(request, 'write_fail.html')
  return render(request, 'text.html',context)
