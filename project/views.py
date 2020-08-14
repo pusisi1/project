@@ -258,19 +258,27 @@ def korea(request):
     return render(request, 'korea.html',context)
 
 def norway(request):
-    article_list = NORWAY.objects.order_by('id')
+    korea_list = KOREA.objects.order_by('id')
+    norway_list = NORWAY.objects.order_by('id')
+    bbc_list= BBC.objects.order_by('id')
     
     context = {
-        'article_list' : article_list,
+        'korea_list':korea_list,
+        'norway_list':norway_list,
+        'bbc_list' : bbc_list,
         
     }
     return render(request, 'norway.html',context)
 
 def bbc(request):
-    article_list = BBC.objects.order_by('id')
+    korea_list = KOREA.objects.order_by('id')
+    norway_list = NORWAY.objects.order_by('id')
+    bbc_list = BBC.objects.order_by('id')
     
     context = {
-        'article_list' : article_list,
+        'korea_list':korea_list,
+        'norway_list':norway_list,
+        'bbc_list' : bbc_list,
         
     }
     return render(request, 'bbc.html',context)

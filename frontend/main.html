@@ -171,10 +171,12 @@ background:linear-gradient(to bottom, #39f,#fff);
 
 .title{
     height:200px;
-    line-height: 1500%;
+    line-height: 650%;
     position: relative;
-    left: 2%;
-    font-size: 20px;
+    left: 31%;
+    font-size: 40px;
+    color:rgb(133, 124, 124);
+    
 }
 
 .first{
@@ -349,11 +351,11 @@ background:linear-gradient(to bottom, #39f,#fff);
     {% for we in article_list %}
       <div class="whe">
       <div class="day">{{ we.day }}</div>
-      <div class="time">{{ we.time }}</div>
+      <div class="time">{{ we.time }}시</div>
       <div class="weather">{{we.weather}}</div>
-      <div class="RP">{{we.RP}}</div>
+      <div class="RP">{{we.RP}}%</div>
       <div class="rain">{{we.rain}}</div>
-      <div class="temp">{{we.temp}}</div>
+      <div class="temp">{{we.temp}}˚</div>
     </div>
     {% endfor %}
     

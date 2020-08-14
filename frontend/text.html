@@ -60,15 +60,15 @@
       height:50px;
       border-bottom:1px solid #978d8d;
       text-align: left;
+     
     }
 
-    .content_place1{
+    .content_place{
       
-      background-color: yellow;
-      height: 100px;
+     line-height: 500%;
     }
 
-    .content_place2{
+    /* .content_place2{
       
       background-color: yellow;
       height: 100px;
@@ -78,7 +78,7 @@
       
       background-color: yellow;
       height: 100px;
-    }
+    } */
     .place1{
       display:flex;
       flex-direction:row;
@@ -111,6 +111,9 @@
       text-align: right ;
       width:20%;
     }
+    .alert{
+      background-color: white;
+    }
   </style>
 
   
@@ -125,21 +128,28 @@
         <p><a href="#">Interests</a></p>
         <p>
           <span class="label label-default">News</span>
-          <span class="label label-primary">W3Schools</span>
-          <span class="label label-success">Labels</span>
+          <span class="label label-primary">Weather</span>
+          <span class="label label-success">Flood</span>
           <span class="label label-info">Football</span>
           <span class="label label-warning">Gaming</span>
           <span class="label label-danger">Friends</span>
         </p>
       </div>
       <div class="alert alert-success fade in">
+        
         <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-        <p><strong>Ey!</strong></p>
-        People are looking at your profile. Find out who.
+       
+        <a href="#">
+        <img src="/frontend/images/image1.jpg" height="100%" width="100%" alt="Avatar"></a>
       </div>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+      <div class="alert alert-success fade in">
+        
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        
+        <a href="#">
+        <img src="/frontend/images/image2.jpg" height="100%" width="100%" alt="Avatar"></a>
+      </div>
+      
     </div>
     <div class="col-sm-7">
     
@@ -198,7 +208,7 @@
         <div class="ti">{{qe.user.name}}</div>
         <div class="empty"></div>
         <div class="conte">{{qe.content}}</div>
-        <div class="delete">삭제</div>
+        <div class="delete"></div>
       </div>
       
     </div>
