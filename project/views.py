@@ -39,9 +39,14 @@ def bbc_data():
     for t in tds:
         weather.append(t.get_text())
 #time/temp/RP/weather/   
-    for a in range(0,len(time)):
-        a=bbc(time=time[a],temp=temp[a],RP=RP[a],weather=weather[a])
-        a.save()
+    for a in range(0,15):
+        bbc = BBC.objects.get(id=a+1)
+        bbc.time = time[a]
+        bbc.temp = temp[a]
+        bbc.RP = RP[a]
+        bbc.weather = weather[a]
+        bbc.save()
+       
         
 
 
@@ -49,7 +54,7 @@ def bbc_data():
 
 
 def norway_data():
-    html_NORWAY = urlopen("https://www.yr.no/place/South_Korea/North_Gyeongsang/Andong/hour_by_hour.html")  
+    html_NORWAY = urlopen("https://www.yr.no/place/South_Korea/Seoul/Seoul/hour_by_hour.html")  
     soup_NORWAY = BeautifulSoup(html_NORWAY, "html.parser") 
     table_NORWAY = soup_NORWAY.find("table", class_="yr-table-hourly") #가져올 테이블
 #시간/날씨/온도/강수량/바람
@@ -74,9 +79,15 @@ def norway_data():
         rain.append(t.get_text())#강수량
     tds = table_NORWAY.select('tbody td.txt-left')
     
-    for a in range(0,len(time)):
-        a=NORWAY(time=time[a],weather=weather[a],temp=temp[a],rain=rain[a])
-        a.save()
+    for a in range(0,15):
+        norway = NORWAY.objects.get(id=a+1)
+        norway.time = time[a]
+        norway.weather = weather[a]
+        norway.temp = temp[a]
+        norway.rain = rain[a]
+        norway.save()
+        #a=NORWAY(time=time[a],weather=weather[a],temp=temp[a],rain=rain[a])
+        #a.save()
         
       
 
@@ -144,9 +155,19 @@ def korea_data(): #한국기상청 날짜
 	    if w.name == 'td' and len(w.contents) > 0:
 	        hum.append(w.contents[0].get_text())
     hum=hum[:len(day)]    
-    for a in range(0,len(day)):
-        a=Korea(day=day[a],time=time[a],weather=weather[a],RP=RP[a],rain=rain[a],temp=temp[a],hum=hum[a])
-        a.save()
+    
+    for a in range(0,15):
+        korea = KOREA.objects.get(id=a+1)
+        korea.day = day[a]
+        korea.time = time[a]
+        korea.weather = weather[a]
+        korea.RP = RP[a]
+        korea.rain = rain[a]
+        korea.temp = temp[a]
+        korea.hum = hum[a]
+        korea.save()
+        #a=Korea(day=day[a],time=time[a],weather=weather[a],RP=RP[a],rain=rain[a],temp=temp[a],hum=hum[a])
+        #a.save()
         
 
 #day/time/weather/RP/rain/temp/hum
@@ -285,3 +306,8 @@ def bbc(request):
     }
     return render(request, 'bbc.html',context)
    
+def korea_test(request):
+    korea_data()
+
+def norway_test(request):
+    norway_data()
